@@ -1,2 +1,2 @@
-# openshift-php5.5-cgi-apache-composer
+# openshift-php-cgi-apache-composer
 Base cartridge to develop PHP applications relying on PHP frameworks
