@@ -63,7 +63,7 @@ function install_php() {
 
 function check_php() {
 	if [[ -x $OPENSHIFT_RUNTIME_DIR/bin/php-cgi ]] ; then
-	if [[ "`$OPENSHIFT_RUNTIME_DIR/bin/php-cgi`" =~ "${DIST_PHP_VER}" ]] ; then
+	if [[ "`$OPENSHIFT_RUNTIME_DIR/bin/php-cgi --version`" =~ "${DIST_PHP_VER}" ]] ; then
 		return 0
 	fi
 	fi
