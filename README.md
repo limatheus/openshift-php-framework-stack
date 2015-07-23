@@ -1,6 +1,6 @@
 # Openshift PHP Framework Stack
 
-This cartridge can be used as a base to develop PHP applications relying on PHP frameworks (such as the ZendFramework or Symfony, for example).
+This cartridge can be used as a base to develop PHP applications relying on PHP frameworks requiring Composer to download dependencies (such as the ZendFramework or Symfony, for example).
 
 ## Quick Start
 
@@ -15,7 +15,7 @@ This cartridge can be used as a base to develop PHP applications relying on PHP 
 
 ## Using a PHP Framework
 
-This cartridge installs Composer automatically. To demonstrate this, we will install the ZendFramework skeleton application:
+To demonstrate the usage of Composer, we will install the ZendFramework skeleton application:
 
 1. Delete the `index.cgi` file in the `/public` directory
 2. Download the ZendFramework skeleton application as a `.zip` file from https://github.com/zendframework/ZendSkeletonApplication
@@ -23,6 +23,8 @@ This cartridge installs Composer automatically. To demonstrate this, we will ins
 4. Commit and push all modifications
 5. During the git push, Composer will download all dependencies found in `composer.json`
 6. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
+
+A similar procedure can be used for other PHP frameworks. 
 
 ## About Apache Configuration
 
