@@ -1,0 +1,23 @@
+Name: PHP_STACK
+Cartridge-Short-Name: PHP_STACK
+Cartridge-Version: '1.0.0'
+Compatible-Versions: []
+Cartridge-Vendor: JVerstrynge
+Display-Name: PHP Stack For PHP Applications
+Description: "Basic cartridge to implement PHP application relying on PHP frameworks."
+Version: '1.0.0'
+Versions: []
+License: "The MIT License (MIT)"
+License-Url: http://opensource.org/licenses/MIT
+Vendor: JVerstrynge
+Categories:
+  - web_framework
+  - php_stack
+Scaling:
+  Min: 1
+  Max: -1
+Website: https://github.com/JVerstry/openshift-php-cgi-apache-composer
+Provides:
+  - php
+  - apache
+  - composer
