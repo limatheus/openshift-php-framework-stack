@@ -26,24 +26,24 @@ X-Powered-By: /bin/bash
 
 <html>
 <head>
-<title>PHP Stack</title>
+<title>PHP Stack for Openshift</title>
 </head>
 <body>
-<p>You have created a PHP Stack Openshift application</p><br />
+<h1>PHP Stack for Openshift</h1>
 <p>"
 
 if [[ -x ${OPENSHIFT_RUNTIME_DIR}/bin/php-cgi ]]; then
-	echo "Start coding or check <a href=\"?phpinfo\">phpinfo</a>. <b>Remember to remove or update index.cgi in the /public folder</b>"
+	echo "<p>The PHP build is finished.</p>"
+	echo "<p>Check <a href=\"?phpinfo\">phpinfo</a> or start coding (remember to remove/update index.cgi in the /public folder)</p>"
 elif [[ -f /tmp/makephp ]]; then
-	echo "<p>Building PHP</p>"
-	echo "<p>This page will refresh automatically, you can close it and come back later...</p>"
+	echo "<p>Building PHP... This page will refresh automatically, you can close it and come back later!</p>"
 	echo "<p>If necessary, <a href=https://github.com/JVerstry/openshift-php-framework-stack/issues >submit an issue</a>.</p>"
 	echo "<pre style='font-size:.7em;word-break:break-all;font-family:Courier'>"
 	tail /tmp/makephp
 	echo "</pre>"
 	echo "<script>setTimeout(function(){window.location.reload(true)},8000)</script>"
 else
-	echo "<p>Follow the instructions available at <a href=https://github.com/JVerstry/openshift-php-framework-stack>https://github.com/JVerstry/openshift-php-framework-stack</a>."
+	echo "<p>The configured PHP version is 5.6.11. Follow the <a href=https://github.com/JVerstry/openshift-php-framework-stack>instructions</a> to change it."
 	echo "<p><a href=?doitnow>Click here to start the PHP build</a><p>"
 fi
 
