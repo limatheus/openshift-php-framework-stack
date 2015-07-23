@@ -10,13 +10,13 @@ function install_php() {
 	pushd php-${DIST_PHP_VER}
 	
 	mkdir -p ${LIB_DIR}
-	mkdir -p ${CONF_DIR}/php5/conf.d/
+	mkdir -p ${CONF_DIR}/php/conf.d/
 	
 	./configure \
             --with-libdir=lib64 \
             --prefix=${ROOT_DIR} \
-            --with-config-file-path=${CONF_DIR}/php5/ \
-            --with-config-file-scan-dir=${CONF_DIR}/php5/conf.d/ \
+            --with-config-file-path=${CONF_DIR}/php/ \
+            --with-config-file-scan-dir=${CONF_DIR}/php/conf.d/ \
             --with-layout=PHP \
             --with-curl \
             --with-pear \
