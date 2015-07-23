@@ -26,29 +26,25 @@ X-Powered-By: /bin/bash
 
 <html>
 <head>
-<title>Installed</title>
+<title>PHP Stack</title>
 </head>
 <body>
-<h1>Installed</h1>
-<p>You just created one amazing PHP5.5+Apache app.</p>
-<h2>Next...</h2>
+<p>You have created a PHP Stack Openshift application</p><br />
 <p>"
 
 if [[ -x ${OPENSHIFT_RUNTIME_DIR}/bin/php-cgi ]]; then
-	echo "Start coding or test <a href=\"?phpinfo\">phpinfo</a>. <b>Remember to remove index.cgi</b>"
+	echo "Start coding or check <a href=\"?phpinfo\">phpinfo</a>. <b>Remember to remove or update index.cgi in the /public folder</b>"
 elif [[ -f /tmp/makephp ]]; then
-	echo "<p>Still spawning your world...</p>"
-	echo "<p>This page shall refresh automatically...</p>"
-	echo "<p>Now you can close this page, and come back whenever...</p>"
-	echo "<p>Have problem? <a href=https://github.com/laobubu/openshift-php5.5-cgi-apache/issues/new >submit issue.</a></p>"
+	echo "<p>Building PHP</p>"
+	echo "<p>This page will refresh automatically, you can close it and come back later...</p>"
+	echo "<p>If necessary, <a href=https://github.com/JVerstry/openshift-php-framework-stack/issues >submit an issue</a>.</p>"
 	echo "<pre style='font-size:.7em;word-break:break-all;font-family:Courier'>"
 	tail /tmp/makephp
 	echo "</pre>"
-	echo "<script>setTimeout(function(){window.location.reload(true)},10000)</script>"
+	echo "<script>setTimeout(function(){window.location.reload(true)},8000)</script>"
 else
-	echo "<p>Follow the instruction on <a href=https://github.com/laobubu/openshift-php5.5-cgi-apache>https://github.com/laobubu/openshift-php5.5-cgi-apache</a>."
-	echo "<p>You can refresh this page to check if the world is ready."
-	echo "<p><a href=?doitnow>Come on, robot, you can do it automatically...</a><p>"
+	echo "<p>Follow the instructions available at <a href=https://github.com/JVerstry/openshift-php-framework-stack>https://github.com/JVerstry/openshift-php-framework-stack</a>."
+	echo "<p><a href=?doitnow>Click here to start the PHP build</a><p>"
 fi
 
 echo "</p></body></html>"
