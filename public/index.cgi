@@ -36,11 +36,12 @@ if [[ -x ${OPENSHIFT_RUNTIME_DIR}/bin/php-cgi ]]; then
 	echo "<p>The PHP build is finished.</p>"
 	echo "<p>Check <a href=\"?phpinfo\">phpinfo</a> or start coding (remember to remove/update index.cgi in the /public folder)</p>"
 elif [[ -f /tmp/makephp ]]; then
-	echo "<p>Building PHP... This page will refresh automatically, you can close it and come back later!</p>"
-	echo "<p>If necessary, <a href=https://github.com/JVerstry/openshift-php-framework-stack/issues >submit an issue</a>.</p>"
+	echo "<p>Building PHP... (it takes about one hour)</p>"
+    echo "<p>This page will refresh automatically, you can close it and come back later!</p>"
 	echo "<pre style='font-size:.7em;word-break:break-all;font-family:Courier'>"
 	tail /tmp/makephp
 	echo "</pre>"
+	echo "<p>If necessary, <a href=https://github.com/JVerstry/openshift-php-framework-stack/issues >submit an issue</a>.</p>"
 	echo "<script>setTimeout(function(){window.location.reload(true)},8000)</script>"
 else
 	echo "<p>The configured PHP version is 5.6.11. Follow the <a href=https://github.com/JVerstry/openshift-php-framework-stack>instructions</a> to change it."
