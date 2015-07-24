@@ -11,18 +11,26 @@ This cartridge can be used as a base to develop PHP applications relying on PHP 
 5. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
 6. Click the last link to start the build, it will take about an hour
 7. Clone the application's repository locally (or pull changes if you have already cloned it)
-8. Starting coding your PHP application
+8. Rename the `_build file` to `build` in the `/.openshift/action_hooks/` directory to activate Composer
+9. Commit this file
+10. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
+11. Commit this file again and push it too.
+9. Starting coding your PHP application
 
 ## Using a PHP Framework
 
 To demonstrate the usage of Composer, we will install the ZendFramework skeleton application:
 
 1. Delete the `index.cgi` file in the `/public` directory
-2. Download the ZendFramework skeleton application as a `.zip` file from https://github.com/zendframework/ZendSkeletonApplication
-3. Unzip this file at the root of your git repository (i.e., the content of `/public` in the `.zip` must be poured in your local `/public` directory)
-4. Commit and push all modifications
-5. During the git push, Composer will download all dependencies found in `composer.json`
-6. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
+2. Rename the `_build file` to `build` in the `/.openshift/action_hooks/` directory if you have not done so already
+3. Commit this file
+4. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
+5. Commit this file again and push it too
+6. Download the ZendFramework skeleton application as a `.zip` file from https://github.com/zendframework/ZendSkeletonApplication
+7. Unzip this file at the root of your git repository (i.e., the content of `/public` in the `.zip` must be poured in your local `/public` directory)
+8. Commit and push all modifications
+9. During the git push, Composer will download all dependencies found in `composer.json`
+10. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
 
 A similar procedure can be used for other PHP frameworks. 
 
