@@ -1,6 +1,7 @@
 # Openshift PHP Framework Stack
 
 This cartridge can be used as a base to develop PHP applications relying on PHP frameworks requiring Composer to download dependencies (such as the ZendFramework or Symfony, for example).
+The PHP version can be configured.
 
 ## Quick Start
 
