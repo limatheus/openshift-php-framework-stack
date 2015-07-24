@@ -10,11 +10,10 @@ This cartridge can be used as a base to develop PHP applications relying on PHP 
 4. If you want to modify the PHP version to be built, clone the application's git repository locally, update `DIST_PHP_VER` in `/misc/make.sh`, then git commit and push this modification
 5. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
 6. Click the last link to start the build, it will take about an hour
-7. Clone the application's repository locally (or pull changes if you have already cloned it)
-8. Rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory to activate Composer
+7. To activate Composer, clone the application's repository locally (or pull changes if you have already cloned it) and rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory 
 9. Commit this file
 10. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
-11. Commit this file again and push it too when the build is finished.
+11. Commit this file again and push it too when the build is finished
 9. Starting coding your PHP application
 
 ## Using a PHP Framework
