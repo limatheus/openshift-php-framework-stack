@@ -17,6 +17,6 @@ pushd ${OPENSHIFT_REPO_DIR}/misc
 
 chmod +x make_php
 source make_php
-check_all
+check_php
 
 popd
