@@ -10,8 +10,4 @@ else
     php $OPENSHIFT_DATA_DIR/composer.phar self-update
 fi
 
-unset GIT_DIR
-
-# if [ -f "$OPENSHIFT_REPO_DIR/composer.json" ]; then
-    ( cd $OPENSHIFT_REPO_DIR ; php $OPENSHIFT_DATA_DIR/composer.phar install )
-# fi
+( unset GIT_DIR ; cd $OPENSHIFT_REPO_DIR ; php $OPENSHIFT_DATA_DIR/composer.phar install )
