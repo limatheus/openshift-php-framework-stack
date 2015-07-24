@@ -11,10 +11,10 @@ This cartridge can be used as a base to develop PHP applications relying on PHP 
 5. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
 6. Click the last link to start the build, it will take about an hour
 7. Clone the application's repository locally (or pull changes if you have already cloned it)
-8. Rename the `_build file` to `build` in the `/.openshift/action_hooks/` directory to activate Composer
+8. Rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory to activate Composer
 9. Commit this file
 10. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
-11. Commit this file again and push it too.
+11. Commit this file again and push it too when the build is finished.
 9. Starting coding your PHP application
 
 ## Using a PHP Framework
@@ -22,7 +22,7 @@ This cartridge can be used as a base to develop PHP applications relying on PHP 
 To demonstrate the usage of Composer, we will install the ZendFramework skeleton application:
 
 1. Delete the `index.cgi` file in the `/public` directory
-2. Rename the `_build file` to `build` in the `/.openshift/action_hooks/` directory if you have not done so already
+2. Rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory if you have not done so already
 3. Commit this file
 4. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
 5. Commit this file again and push it too
