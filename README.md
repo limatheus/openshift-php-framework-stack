@@ -8,8 +8,8 @@ The PHP version can be configured.
 1. Create a do-it-yourself application in Openshift (see https://openshift.redhat.com/app/console/application_type/cart!diy-0.1) 
 2. Fill the **Source Code** text field with: https://github.com/JVerstry/openshift-php-framework-stack
 3. Click **Create Application** and wait until ready
-4. If you want to modify the PHP version to be built, clone the application's git repository locally, update `DIST_PHP_VER` in `/misc/make.sh`, then git commit and push this modification
-5. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
+4. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
+5. If you want to modify the PHP version to be built, clone the application's git repository locally, update `DIST_PHP_VER` in `/misc/make.sh`, then git commit and push this modification
 6. Click the last link to start the build, it will take about an hour
 7. To activate Composer, clone the application's repository locally (or pull changes if you have already cloned it) and rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory 
 9. Commit this file
