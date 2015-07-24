@@ -12,6 +12,6 @@ fi
 
 unset GIT_DIR
 
-if [ -f "$OPENSHIFT_REPO_DIR/composer.json" ]; then
+# if [ -f "$OPENSHIFT_REPO_DIR/composer.json" ]; then
     ( cd $OPENSHIFT_REPO_DIR ; php $OPENSHIFT_DATA_DIR/composer.phar install )
-fi
+# fi
