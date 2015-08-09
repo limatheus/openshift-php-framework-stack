@@ -37,3 +37,17 @@ A similar procedure can be used for other PHP frameworks.
 ## About Apache Configuration
 
 The Apache server configuration can be found and modified in `/conf/httpd.conf`.
+
+## FAQ
+
+### php -v returns PHP 5.3.3 (wrong version), why?
+
+When you log into your application (with ssh for example), and type `php -v` after the installation, 
+the returned version is the one of the default Openshift PHP installation in: `/usr/bin/php`. That
+is to be expected. Your PHP files will, nevertheless, be processed with the version configured in
+`/misc/make.sh`.
+
+More information here: http://stackoverflow.com/questions/31478610/wrong-php-version-returned-in-openshift
+
+
+
