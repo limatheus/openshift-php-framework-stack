@@ -47,7 +47,6 @@ the returned version is the one of the default Openshift PHP installation in: `/
 is to be expected.
 
 Your PHP files will, nevertheless, be processed with the version configured in
-`/misc/make.sh`. More information here: http://stackoverflow.com/questions/31478610/wrong-php-version-returned-in-openshift
-
+`/misc/make.sh`. More information here: https://github.com/JVerstry/openshift-php-framework-stack/issues/2
 
 
