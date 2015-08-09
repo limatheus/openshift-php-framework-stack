@@ -44,10 +44,10 @@ The Apache server configuration can be found and modified in `/conf/httpd.conf`.
 
 When you log into your application (with ssh for example), and type `php -v` after the installation, 
 the returned version is the one of the default Openshift PHP installation in: `/usr/bin/php`. That
-is to be expected. Your PHP files will, nevertheless, be processed with the version configured in
-`/misc/make.sh`.
+is to be expected.
 
-More information here: http://stackoverflow.com/questions/31478610/wrong-php-version-returned-in-openshift
+Your PHP files will, nevertheless, be processed with the version configured in
+`/misc/make.sh`. More information here: http://stackoverflow.com/questions/31478610/wrong-php-version-returned-in-openshift
 
 
 
