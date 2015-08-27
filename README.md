@@ -12,9 +12,9 @@ The PHP version can be configured. By default, the FastCGI Process Manager (FPM)
 5. If the PHP version to compile is less than 5.3.3, remove the fpm compilation options in `/misc/make_php` and git commit and push this modification
 6. Visit your application's main page (e.g. https://myapp-mydomain.rhcloud.com/)
 7. Click the last link to start the build, it will take about an hour
-8. To activate Composer, clone the application's repository locally (or pull changes if you have already cloned it) and rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory 
+8. To activate Composer, clone the application's repository locally (or pull changes if you have already cloned it) and rename the `_deploy` file to `deploy` in the `/.openshift/action_hooks/` directory 
 9. Commit this file
-10. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
+10. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/deploy`
 11. Commit this file again and push it too when the build is finished
 12. Starting coding your PHP application
 
@@ -23,9 +23,9 @@ The PHP version can be configured. By default, the FastCGI Process Manager (FPM)
 To demonstrate the usage of Composer, we will install the ZendFramework skeleton application:
 
 1. Delete the `index.cgi` file in the `/public` directory
-2. Rename the `_build` file to `build` in the `/.openshift/action_hooks/` directory if you have not done so already
+2. Rename the `_deploy` file to `deploy` in the `/.openshift/action_hooks/` directory if you have not done so already
 3. Commit this file
-4. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/build`
+4. Make it executable with `git update-index --chmod=+x .openshift/action_hooks/deploy`
 5. Commit this file again and push it too
 6. Download the ZendFramework skeleton application as a `.zip` file from https://github.com/zendframework/ZendSkeletonApplication
 7. Unzip this file at the root of your git repository (i.e., the content of `/public` in the `.zip` must be poured in your local `/public` directory)
