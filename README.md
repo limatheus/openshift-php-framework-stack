@@ -50,4 +50,6 @@ is to be expected.
 Your PHP files will, nevertheless, be processed with the version configured in
 `/misc/make.sh`. More information here: https://github.com/JVerstry/openshift-php-framework-stack/issues/2
 
+# Test 1
+
 
